@@ -1,9 +1,10 @@
 # ALCHE Higher level programming
-* Python Hello world
-* If else conditions
-* Loops
-* Functions
-* Import Modules
-* Data Structures
-    * Tuples
+* Python - Hello, World 
+* Python - if/else, loops, functions
+* Python - import & modules 
+* Python - Data Structures
     * Lists
+    * Tuples
+* Python - More Data Structures
+    * Set
+    * Dictionary
