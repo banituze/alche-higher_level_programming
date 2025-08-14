@@ -1,4 +1,4 @@
-# ALCHE Higher level programming
+# ALCHE Higher Level Programming
 * Python - Hello, World 
 * Python - if/else, loops, functions
 * Python - import & modules 
