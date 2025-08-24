@@ -1,3 +1,3 @@
-Python - Data Structures
-o	Lists
-o	Tuples
+* Python - Data Structures
+    * Lists
+    * Tuples
