@@ -20,13 +20,12 @@ if __name__ == '__main__':
         line_counter = 0
         for line in sys.stdin:
             parts = line.split()
-            if len(parts) >= 7:
-                code = parts[7]
+            if len(parts) >= 2:
+                code = parts[-2]
                 if code in code_dict:
                     code_dict[code] += 1
-            if len(parts) >= 9:
                 try:
-                    size += int(parts[8])
+                    size += int(parts[-1])
                 except ValueError:
                     pass
             line_counter += 1
