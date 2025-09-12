@@ -14,3 +14,4 @@
 * Python - Everything is object
 * Python - Inheritance
 * Python - Input/Output
+* SQL - Introduction
