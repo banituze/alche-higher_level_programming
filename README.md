@@ -15,3 +15,4 @@
 * Python - Inheritance
 * Python - Input/Output
 * SQL - Introduction
+* SQL - More queries
