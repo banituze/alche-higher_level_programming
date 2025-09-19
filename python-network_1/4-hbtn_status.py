@@ -9,5 +9,5 @@ if __name__ == "__main__":
     r = requests.get('https://intranet.hbtn.io/status')
     if r.startswith('https://'):
         r = "https://alu-intranet.hbtn.io/status"
-    t = r.text
-    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
+    t = requests.get(r)
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t.text), t.text))
