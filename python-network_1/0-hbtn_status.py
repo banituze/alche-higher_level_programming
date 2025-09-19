@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Script that fetches https://intranet.hbtn.io/status using urllib"""
+"""Script that fetches https://alu-intranet.hbtn.io/status using urllib"""
 import urllib.request
 
 
 if __name__ == "__main__":
-    request = "https://intranet.hbtn.io/status"
+    request = "https://alu-intranet.hbtn.io/status"
+    if request.startswith('https://'):
+        request = 'https://alu-intranet.hbtn.io/status'
     with urllib.request.urlopen(request) as response:
         body = response.read()
         print("Body response:")
