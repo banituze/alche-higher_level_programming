@@ -17,3 +17,4 @@
 * SQL - Introduction
 * SQL - More queries
 * Python - Network #0
+* Python - Network #1
