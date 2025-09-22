@@ -1,116 +1,68 @@
-Test the matrix divided function
+A test for the say_my_name function
 
+Import the module
 >>> import sys
 >>> sys.path.insert(1, '../')
->>> lib = __import__("2-matrix_divided")
->>> func = lib.matrix_divided
+>>> lib = __import__("3-say_my_name")
+>>> func = lib.say_my_name
+>>> fn1 = "Niels"
+>>> ln1 = "Bohr"
+>>> fn2 = 4
+>>> ln2 = 5
 
-#Define test matricies
->>> x = [[0,2],[1,2],[4,4],[7,8],[-54,3.2]]
->>> y = [[1,9 + 1j,3],[1.2, "", 1.5]]
->>> z = [[1,2,3],[4,5]]
 
-#Normal checks
->>> func(x, 1)
-[[0.0, 2.0], [1.0, 2.0], [4.0, 4.0], [7.0, 8.0], [-54.0, 3.2]]
->>> func(x, 2)
-[[0.0, 1.0], [0.5, 1.0], [2.0, 2.0], [3.5, 4.0], [-27.0, 1.6]]
+#Normal Test
+>>> func(fn1, ln1)
+My name is Niels Bohr
 
 #Type Errors
->>> func(x, "")
+>>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: div must be a number
-
->>> func(y, 2)
+TypeError: last_name must be a string
+>>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: first_name must be a string
 
-#unbalanced rows
->>> func(z, 1)
+
+>>> fn2 = 4.3
+>>> ln2 = 5.7
+
+
+>>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: Each row of the matrix must have the same size
-
-#Extra Valid Tests
->>> matrix = [
-...     [3, 6, 9],
-...     [12, 15, 18]
-... ]
->>> func(matrix, 3)
-[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
-
->>> matrix = [
-...     [1, 2, 3],
-...     [4, 5, 6]
-... ]
->>> func(matrix, 3)
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-
->>> matrix
-[[1, 2, 3], [4, 5, 6]]
-
->>> matrix = [
-...     [1.1, -2.2, 3.3],
-...     [4.4, 5.5, -6.6]
-... ]
->>> func(matrix, 3)
-[[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
-
->>> matrix = [
-...     [1, -2.2, 3, 4.4, 5],
-...     [-6.6, 7.00, 8, 9.999, 10]
-... ]
->>> func(matrix, 3)
-[[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
-
-#Invalid Matrices
->>> func("not a list", 3)
+TypeError: last name must be a string
+>>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: first name must be a string
 
->>> func(None, 3)
+
+
+>>> fn2 = 3 + 1j
+>>> ln2 = []
+
+
+>>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> func([], 3)
+TypeError: last_name must be a string
+>>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: first_name must be a string
 
->>> func([[]], 3)
-[[]]
+>>> fn2 = {}
+>>> ln2 = 3 + 1j
 
->>> func([1, 2, 3], 3)
+
+>>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> func([[1, 2, 3], [4, "not a number", 6]], 3)
+TypeError: last name must be a string
+>>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> func([[1, 2, 3, 4], [5, 6, 7]], 3)
-Traceback (most recent call last):
-...
-TypeError: Each row of the matrix must have the same size
-
-#Invalid Divisors
->>> func([[1, 2, 3], [4, 5, 6]], "not a number")
-Traceback (most recent call last):
-...
-TypeError: div must be a number
-
->>> func([[1, 2, 3], [4, 5, 6]], None)
-Traceback (most recent call last):
-...
-TypeError: div must be a number
-
->>> func([[1, 2, 3], [4, 5, 6]], 0)
-Traceback (most recent call last):
-...
-ZeroDivisionError: division by zero
+TypeError: first name must be a string
