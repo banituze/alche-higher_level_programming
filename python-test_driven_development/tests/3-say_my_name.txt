@@ -5,15 +5,15 @@ Import the module
 >>> sys.path.insert(1, '../')
 >>> lib = __import__("3-say_my_name")
 >>> func = lib.say_my_name
->>> fn1 = "Musa"
->>> ln1 = "Kanneh"
+>>> fn1 = "Niels"
+>>> ln1 = "Bohr"
 >>> fn2 = 4
 >>> ln2 = 5
 
 
 #Normal Test
 >>> func(fn1, ln1)
-My name is Musa Kanneh
+My name is Niels Bohr
 
 #Type Errors
 >>> func(fn1, ln2)
@@ -33,11 +33,11 @@ TypeError: first_name must be a string
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: last name must be a string
+TypeError: last_name must be a string
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: first name must be a string
+TypeError: first_name must be a string
 
 
 
@@ -61,8 +61,8 @@ TypeError: first_name must be a string
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
-TypeError: last name must be a string
+TypeError: last_name must be a string
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
-TypeError: first name must be a string
+TypeError: first_name must be a string
