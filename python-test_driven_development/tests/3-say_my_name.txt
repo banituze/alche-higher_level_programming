@@ -8,51 +8,44 @@ Import the module
 >>> ln1 = "Bohr"
 >>> fn2 = 4
 >>> ln2 = 5
-
+#Normal Test
 >>> func(fn1, ln1)
 My name is Niels Bohr
-
+#Type Errors
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
-
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
-
 >>> fn2 = 4.3
 >>> ln2 = 5.7
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
-
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
-
 >>> fn2 = 3 + 1j
 >>> ln2 = []
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
-
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
-
 >>> fn2 = {}
 >>> ln2 = 3 + 1j
 >>> func(fn1, ln2)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
-
 >>> func(fn2, ln1)
 Traceback (most recent call last):
 ...
