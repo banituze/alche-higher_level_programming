@@ -19,3 +19,4 @@
 * Python - Network #0
 * Python - Network #1
 * Python - Test-driven development
+* Python - Almost a circle
