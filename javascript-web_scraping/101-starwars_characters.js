@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-function printCharacter(characters, index) {
+function printCharacter (characters, index) {
   if (index >= characters.length) return;
   request.get(characters[index], (error, response, body) => {
     if (error) {
