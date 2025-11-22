@@ -10,7 +10,7 @@ request.get(url, (error, response, body) => {
     const content = JSON.parse(body);
     const characters = content.characters;
 
-    function printCharacter(index) {
+    function printCharacter (index) {
       if (index >= characters.length) return;
       request.get(characters[index], (error, response, body) => {
         if (error) {
